@@ -4,7 +4,7 @@ const Card = (props) => {
   if (props.suit === "♣︎" || props.suit === "♠︎") {
     return (
       <div className="card card-black">
-        <div className="card-tl">
+        <div data-testid="card-black-tl" className="card-tl">
           <div className="card-value">{props.value}</div>
           <div className="card-suit">{props.suit}</div>
         </div>
@@ -17,7 +17,7 @@ const Card = (props) => {
   } else {
     return (
       <div className="card card-red">
-        <div className="card-tl">
+        <div className="card-tl" data-testid="card-red-tl">
           <div className="card-value">{props.value}</div>
           <div className="card-suit">{props.suit}</div>
         </div>

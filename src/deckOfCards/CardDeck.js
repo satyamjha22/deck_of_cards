@@ -89,7 +89,7 @@ const CardDeck = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-sm-6">
+        <div data-testid="deck-component" className="col-sm-6">
           <h1>Deck of Card</h1>
           <Button onClick={shuffleCards}>Shuffle</Button>
           <div className="deck">
@@ -106,17 +106,27 @@ const CardDeck = () => {
         </div>
         <div className="col-sm-6 other">
           <h1>Draw Cards</h1>
-          <Button onClick={drawCards}>Draw Cards</Button>
+          <div data-testid="draw-card" className="draw-card">
+            <Button onClick={drawCards}>Draw Cards</Button>
+          </div>
           <input
             placeholder="Number of card drawn"
             value={noOfcard}
             onChange={(event) => setInputField(event.target.value)}
+            className="no-of-card"
+            type="text"
           />
-          <Button onClick={sortDrawCards}>Sort</Button>
+          <div data-testid="sort-drawn-card" className="sort-draw-card">
+            <Button onClick={sortDrawCards}>Sort</Button>
+          </div>
           <div className="deck">
             {drawnDeck.map(function (card) {
               return (
-                <Card key={card.val} suit={card.suitIcon} value={card.val} />
+                <Card
+                  key={`${card.val} ${card.suitIcon} drawn`}
+                  suit={card.suitIcon}
+                  value={card.val}
+                />
               );
             })}
           </div>
