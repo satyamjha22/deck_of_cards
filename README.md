@@ -7,7 +7,7 @@ Follow these instructions to run the demo app locally
 ```sh
 $ git clone https://github.com/satyamjha22/deck_of_cards.git
 $ cd deck_of_cards
-
+```
 
 Now run the following commands and you should be good to go 💪🏼
 
@@ -29,7 +29,6 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-
 ### `npm run test`
 
 Launches the test runner in the interactive watch mode.\
@@ -41,4 +40,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-```
